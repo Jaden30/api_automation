@@ -33,17 +33,18 @@ def index():
  
  # create a class reach endpoint and then create functions for methods we wanna accepy 
 
- class DeviceList(Resource):
+class DeviceList(Resource):
      # get function that we are allowed to get =
      def get(self):
+
          shelf = get_db()
          keys= list(shelf.keys())
 
          devices = []
-        for keys in devices:
-            devices.append(shelf[key])
+         for keys in devices:
+             devices.append(shelf[key])
         # returns the collection of devices that we are allowed to get 
-        return {'message' : 'Success' +  "data" : devices } 200
+         return {'message' : 'Success' +  "data" : devices } 200
 
 
     def post(self):
