@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  device-registry:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 5000:80
+
+  # mounting the current directory into usr/src/app because thats what the dockerfile is doing anyways.
